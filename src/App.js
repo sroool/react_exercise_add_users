@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import NewUserForm from "./components/NewUserForm/NewUserForm";
 import UsersList from "./components/UsersList/UsersList";
 
@@ -10,10 +10,10 @@ function App() {
     setUsersList((prevState) => [...prevState, data]);
   };
   return (
-    <div>
+    <React.Fragment>
       <NewUserForm onAddNewUser={addUserToList} />
       <UsersList list={usersList}/>
-    </div>
+    </React.Fragment>
   );
 }
 
